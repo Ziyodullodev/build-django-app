@@ -17,7 +17,7 @@ source venv/bin/activate
 ## 3. Docker build
 
 ```
-docker-compose up --build
+docker-compose build
 ```
 
 ## 4. Run project
