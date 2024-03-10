@@ -19,17 +19,17 @@ source venv/bin/activate
 if you don't have poetry installed, you can install it with the following command:
 
 ```
-pip install poetry
-```
-
-then run the following command:
-
-```
-poetry install
+pip install -r requirements.txt
 ```
 
 ## 4. Run project
 
 ```
 docker compose up --build
+```
+
+## 5. Run tests
+
+```
+python manage.py test
 ```
