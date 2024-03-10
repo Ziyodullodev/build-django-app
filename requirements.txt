@@ -12,3 +12,4 @@ typing_extensions
 utils
 drf-yasg
 django-filter
+flake8

@@ -14,28 +14,22 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-## 3. Docker build
+## 3. Poetry install dependencies
+
+if you don't have poetry installed, you can install it with the following command:
 
 ```
-docker-compose build
+pip install poetry
+```
+
+then run the following command:
+
+```
+poetry install
 ```
 
 ## 4. Run project
 
 ```
-docker-compose up
-```
-
-## Additional
-
-```
-docker-compose run web python manage.py migrate
-docker-compose run web python manage.py createsuperuser
-```
-
-## Enter docker bash
-
-```
-docker exec -it project-name_web_1 bash
-docker compose exec web bash
+docker compose up --build
 ```

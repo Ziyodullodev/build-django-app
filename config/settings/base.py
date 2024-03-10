@@ -34,11 +34,12 @@ def get_env_value(env_variable):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_env_value("SECRET_KEY")
 
-# # SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = get_env_value("DEBUG")
 
 ALLOWED_HOSTS = [get_env_value("ALLOWED_HOSTS")]
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #images show only https protocol
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # images show only https protocol
 
 # Application definition
 LOCAL_APPS = [
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "django_filters",
     'drf_yasg',
-    
+
 ] + LOCAL_APPS
 
 
@@ -135,4 +136,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
